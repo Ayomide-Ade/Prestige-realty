@@ -8,7 +8,7 @@ A responsive, multi-file real estate landing page built with vanilla HTML, CSS, 
 
 ## Live Demo
 
-> Deploy to GitHub Pages and paste your URL here.
+> [Click here](https://ayomide-ade.github.io/Prestige-realty/)
 
 ---
 
