@@ -10,72 +10,24 @@
 Tablet 
 */
 @media (max-width: 1024px) {
-  .nav-inner {
-    padding: 1.2rem 2rem;
-  }
+  .nav-inner { padding: 1.2rem 2rem; }
 
-  .hero-left {
-    padding: 9rem 3rem 4rem;
-  }
+  .hero-left { padding: 9rem 3rem 4rem; }
 
-  .form-section {
-    padding: var(--sp-xl) 3rem;
-  }
-  .form-section-inner {
-    gap: 3.5rem;
-  }
+  .form-section { padding: var(--sp-xl) 3rem; }
+  .form-section-inner { gap: 3.5rem; }
 
-  .listings-section {
-    padding: var(--sp-xl) 3rem;
-  }
+  .listings-section { padding: var(--sp-xl) 3rem; }
 
-  .footer-inner {
-    padding: 3.5rem 3rem 2.5rem;
-    gap: 3rem;
-  }
-  .footer-bottom {
-    padding: 1.5rem 3rem;
-  }
+  .footer-inner { padding: 3.5rem 3rem 2.5rem; gap: 3rem; }
+  .footer-bottom { padding: 1.5rem 3rem; }
 }
 
 /* 
 Mobile 
 */
 @media (max-width: 768px) {
-  /* 
-  Nav — show hamburger, hide links 
-  */
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--warm-white);
-    border-bottom: 1px solid var(--border);
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 0.8rem 2rem;
-    font-size: 0.88rem;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* 
-  Hero stacks vertically 
-  */
+  /* Hero stacks vertically */
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -112,23 +64,26 @@ Mobile
   Form section 
   */
   .form-section {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1.2rem;
   }
 
   .form-section::before {
     font-size: 4rem;
   }
 
-  .form-section-inner {
+  .form-section .container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
-  .form-card {
-    padding: 2rem 1.5rem;
+  .form__card {
+    width: 100%;
+    max-width: 480px;       /* cap width so it doesn't look too wide */
+    margin-inline: auto;    /* centre it */
+    padding: 1.8rem 1.4rem;
   }
 
-  .form-row {
+  .form__row {
     grid-template-columns: 1fr;
   }
 
@@ -149,7 +104,7 @@ Mobile
     grid-template-columns: 1fr;
   }
 
-  /*
+  /* 
   Footer 
   */
   .footer-inner {
@@ -175,6 +130,11 @@ Mobile
 Small phones 
 */
 @media (max-width: 480px) {
+  .form__card {
+    max-width: 100%;        /* on very small screens let it fill the padded width */
+    padding: 1.5rem 1rem;
+  }
+
   .footer-cols {
     grid-template-columns: 1fr 1fr;
   }
