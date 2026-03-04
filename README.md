@@ -2,6 +2,8 @@
 
 A responsive, multi-file real estate landing page built with vanilla HTML, CSS, and JavaScript. Designed as a portfolio project and deployable on GitHub Pages with zero build tools or dependencies.
 
+> Built by **Ayomide Adesina** — Frontend & Backend Developer
+
 ---
 
 ## Live Demo
@@ -10,14 +12,39 @@ A responsive, multi-file real estate landing page built with vanilla HTML, CSS, 
 
 ---
 
-## Preview
+## About Me
 
-The page includes four sections:
+Hi, I'm Ayomide — a junior full-stack developer with a passion for building clean, functional web experiences. I work across the full stack, from crafting pixel-precise interfaces in HTML, CSS, and JavaScript to building server-side logic with Node.js and Python, backed by MySQL databases.
 
-- **Hero** — full-screen split layout with animated headline and property stats
-- **Lead Capture Form** — validated consultation request form with success state
-- **Featured Listings** — property cards with hover effects and a save/wishlist toggle
-- **Footer** — multi-column links with social icons
+This project is a demonstration of my frontend skills — specifically my ability to build structured, well-designed, and responsive user interfaces without relying on frameworks or libraries.
+
+**What I work with:**
+
+| Layer | Technologies |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript (ES6+) |
+| Backend | Node.js, Python |
+| Database | MySQL |
+
+---
+
+## About This Project
+
+**Prestige Realty** is a real estate lead capture landing page. It was built entirely from scratch to demonstrate what I can produce with core frontend skills — no frameworks, no build tools, just clean and organised code.
+
+The goal was to show that I understand not just how to write HTML, CSS, and JavaScript, but how to structure a project properly — separating concerns across multiple files the way a real production codebase would be organised.
+
+### What This Project Demonstrates
+
+- Writing semantic, accessible HTML
+- Organising CSS across multiple files using a clear naming convention
+- Using CSS custom properties (variables) to maintain a consistent design system
+- Building responsive layouts with CSS Grid and Flexbox
+- Creating smooth animations and micro-interactions with pure CSS
+- Writing clean, readable JavaScript without jQuery or any library
+- Client-side form validation with helpful inline error messages
+- Using the `IntersectionObserver` API for scroll-triggered animations
+- Structuring a project for real-world deployment on GitHub Pages
 
 ---
 
@@ -25,115 +52,76 @@ The page includes four sections:
 
 ```
 prestige-realty/
-├── index.html              # Main HTML — structure and content only
+├── index.html              # Page structure and content
 │
 ├── css/
-│   ├── variables.css       # Design tokens: colours, fonts, spacing, shadows
-│   ├── base.css            # CSS reset + shared/reusable elements (buttons, eyebrow labels)
-│   ├── nav.css             # Fixed navigation bar
-│   ├── hero.css            # Full-screen hero section
-│   ├── form.css            # Lead capture form & success state
-│   ├── listings.css        # Property cards grid
-│   ├── footer.css          # Site footer
-│   ├── animations.css      # Keyframes + scroll-reveal utility class
-│   └── responsive.css      # All media queries (tablet, mobile, small)
+│   ├── variables.css       # Design tokens — colours, fonts, spacing
+│   ├── base.css            # Reset + shared reusable styles
+│   ├── nav.css             # Navigation bar
+│   ├── hero.css            # Hero section
+│   ├── form.css            # Lead capture form
+│   ├── listings.css        # Property cards
+│   ├── footer.css          # Footer
+│   ├── animations.css      # Keyframes + scroll reveal class
+│   └── responsive.css      # All media queries in one place
 │
 └── js/
-    ├── nav.js              # Scroll shadow effect + mobile hamburger menu
-    ├── form.js             # Client-side form validation + submit handler
-    └── reveal.js           # IntersectionObserver scroll reveals + card save toggle
+    ├── nav.js              # Scroll effect + mobile hamburger menu
+    ├── form.js             # Form validation + submit handler
+    └── reveal.js           # Scroll reveal + wishlist toggle
 ```
-
-Each file has a single responsibility — changing the colour scheme only requires editing `variables.css`, and all breakpoints live in one place (`responsive.css`).
-
----
-
-## Getting Started
-
-No build step, no package manager, no frameworks. Just open the file.
-
-```bash
-# Clone the repo
-git clone https://github.com/YOUR_USERNAME/prestige-realty.git
-
-# Open locally
-cd prestige-realty
-open index.html        # macOS
-start index.html       # Windows
-xdg-open index.html    # Linux
-```
-
-Or use the VS Code **Live Server** extension for auto-reload during development.
-
----
-
-## Customisation
-
-### Change Colours / Fonts
-
-All design tokens are in `css/variables.css`. Edit the `:root` block:
-
-```css
-:root {
-  --gold: #c9a84c; /* accent colour */
-  --charcoal: #1c1c1a; /* primary dark */
-  --cream: #f5f0e8; /* light background */
-  --rust: #9b4f2a; /* italic highlight */
-}
-```
-
-### Update Property Listings
-
-Edit the `<article class="card">` blocks inside the `#listings` section in `index.html`. Swap out the Unsplash image URLs, prices, and addresses.
-
-### Connect the Form to a Real Backend
-
-The form currently simulates a submission with a 1.2 s delay. To wire it up to a real service, open `js/form.js` and replace the `setTimeout` block with a `fetch()` call. A commented-out example using [Formspree](https://formspree.io) is already included in the file.
 
 ---
 
 ## Features
 
-- Responsive layout — works on desktop, tablet, and mobile
-- Mobile hamburger menu with animated open/close
-- Smooth scroll navigation with fixed nav offset
-- Hero image slow-zoom animation (CSS only)
-- Scroll-triggered reveal animations via `IntersectionObserver`
-- Inline form validation with per-field error messages
-- Animated gold sweep on the submit button (CSS only)
-- Save/wishlist ♡ toggle on property cards
-- Graceful fallback for browsers without `IntersectionObserver`
+- Responsive across desktop, tablet, and mobile
+- Mobile hamburger menu with smooth open/close animation
+- CSS-only hero image zoom animation
+- Scroll-triggered section reveals via `IntersectionObserver`
+- Form validation with per-field inline error messages
+- Animated button hover effect (CSS sweep, no JS)
+- Property card save/wishlist toggle
+- Smooth scroll with fixed nav offset compensation
 
 ---
 
-## Technologies
+## Running Locally
 
-| Technology                          | Usage                                                          |
-| ----------------------------------- | -------------------------------------------------------------- |
-| HTML5                               | Semantic structure                                             |
-| CSS3                                | Layout (Grid, Flexbox), custom properties, keyframe animations |
-| Vanilla JavaScript (ES5-compatible) | DOM interaction, form validation, scroll behaviour             |
-| Google Fonts                        | Cormorant Garamond (display) + DM Sans (body)                  |
-| Unsplash                            | Placeholder property images                                    |
+No installs needed. Just open the file in a browser.
 
-No frameworks. No npm. No build tools.
+```bash
+git clone https://github.com/Ayomide-Ade/Prestige-realty
+cd prestige-realty
+open index.html
+```
+
+Or use the **Live Server** extension in VS Code for live reload during development.
 
 ---
 
-## Browser Support
+## Deployment
 
-Works in all modern browsers. JavaScript is written in ES5-compatible syntax (no arrow functions, no `const`/`let` in older targets) for maximum compatibility.
+Hosted on GitHub Pages. To deploy your own copy:
+
+1. Push to a GitHub repository
+2. Go to **Settings → Pages**
+3. Set branch to `main`, folder to `/` (root)
+4. Save — live in under a minute
+
+---
+
+## Get in Touch
+
+If you're a recruiter, client, or fellow developer and you'd like to work together or discuss this project, feel free to reach out.
+
+- **GitHub:** [https://github.com/Ayomide-Ade](https://github.com/Ayomide-Ade)
+- **Email:** ayoa88463@gmail.com
 
 ---
 
 ## License
 
-© 2026 [Your Name]. All rights reserved.
+© 2026 Ayomide Adesina. All rights reserved.
 
-This project is displayed publicly for portfolio purposes only. The source code, design, and assets may **not** be copied, modified, redistributed, or used — in whole or in part — for any purpose without explicit written permission from the author.
-
-See [LICENSE](./LICENSE) for full terms.
-
----
-
-_Built with HTML, CSS, and JavaScript — no frameworks required._
+This repository is publicly visible for portfolio purposes only. The code, design, and assets may not be copied, reused, or redistributed without explicit written permission from the author. See [LICENSE](./LICENSE) for full terms.
