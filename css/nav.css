@@ -4,7 +4,9 @@
 
 .nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   height: var(--nav-h);
   display: flex;
@@ -19,13 +21,13 @@
 }
 
 .nav.scrolled {
-  box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
 }
 
 /* 
 Logo 
 */
-.nav__logo {
+.nav_logo {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 600;
@@ -33,16 +35,18 @@ Logo
   color: var(--charcoal);
   flex-shrink: 0;
 }
-.nav__logo span { color: var(--gold); }
+.nav_logo span {
+  color: var(--gold);
+}
 
 /* 
 Links 
 */
-.nav__links {
+.nav_links {
   display: flex;
   gap: 2.2rem;
 }
-.nav__links a {
+.nav_links a {
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -52,21 +56,27 @@ Links
   padding-bottom: 2px;
   transition: color 0.2s;
 }
-.nav__links a::after {
-  content: '';
+.nav_links a::after {
+  content: "";
   position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 1px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
   background: var(--gold);
   transition: width 0.25s var(--ease);
 }
-.nav__links a:hover { color: var(--charcoal); }
-.nav__links a:hover::after { width: 100%; }
+.nav_links a:hover {
+  color: var(--charcoal);
+}
+.nav_links a:hover::after {
+  width: 100%;
+}
 
 /* 
 CTA button 
 */
-.nav__cta {
+.nav_cta {
   font-size: 0.74rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -76,10 +86,12 @@ CTA button
   color: var(--charcoal);
   background: transparent;
   cursor: pointer;
-  transition: background 0.25s, color 0.25s;
+  transition:
+    background 0.25s,
+    color 0.25s;
   flex-shrink: 0;
 }
-.nav__cta:hover {
+.nav_cta:hover {
   background: var(--charcoal);
   color: var(--cream);
 }
@@ -87,7 +99,7 @@ CTA button
 /* 
 Hamburger (mobile) 
 */
-.nav__hamburger {
+.nav_hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -96,25 +108,34 @@ Hamburger (mobile)
   cursor: pointer;
   padding: 4px;
 }
-.nav__hamburger span {
+.nav_hamburger span {
   display: block;
   width: 24px;
   height: 1.5px;
   background: var(--charcoal);
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 }
-.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.nav__hamburger.open span:nth-child(2) { opacity: 0; }
-.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav_hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav_hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav_hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
 
 /* 
 Mobile drawer 
 */
-.nav__drawer {
+.nav_drawer {
   display: flex;
   position: fixed;
   top: var(--nav-h);
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   background: var(--warm-white);
   border-bottom: 1px solid var(--border);
   padding: 1.5rem 2rem 2rem;
@@ -125,16 +146,22 @@ Mobile drawer
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: transform 0.3s var(--ease), opacity 0.3s, visibility 0s 0.3s;
+  transition:
+    transform 0.3s var(--ease),
+    opacity 0.3s,
+    visibility 0s 0.3s;
 }
-.nav__drawer.open {
+.nav_drawer.open {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: transform 0.3s var(--ease), opacity 0.3s, visibility 0s 0s;
+  transition:
+    transform 0.3s var(--ease),
+    opacity 0.3s,
+    visibility 0s 0s;
 }
-.nav__drawer a {
+.nav_drawer a {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -148,7 +175,11 @@ Mobile drawer
 Responsive 
 */
 @media (max-width: 860px) {
-  .nav__links,
-  .nav__cta { display: none; }
-  .nav__hamburger { display: flex; }
+  .nav_links,
+  .nav_cta {
+    display: none;
+  }
+  .nav_hamburger {
+    display: flex;
+  }
 }

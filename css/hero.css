@@ -12,7 +12,7 @@ HERO.CSS — Hero Section
 /* 
 Left Column 
 */
-.hero__left {
+.hero_left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,14 +20,14 @@ Left Column
     clamp(2rem, 5vw, 5rem);
 }
 
-.hero__eyebrow {
+.hero_eyebrow {
   margin-bottom: 1.8rem;
   opacity: 0;
   transform: translateY(14px);
   animation: fadeUp 0.7s 0.2s var(--ease) forwards;
 }
 
-.hero__title {
+.hero_title {
   font-size: clamp(3rem, 5vw, 5.2rem);
   font-weight: 300;
   color: var(--charcoal);
@@ -35,12 +35,12 @@ Left Column
   transform: translateY(20px);
   animation: fadeUp 0.8s 0.4s var(--ease) forwards;
 }
-.hero__title em {
+.hero_title em {
   font-style: italic;
   color: var(--rust);
 }
 
-.hero__sub {
+.hero_sub {
   margin-top: 1.8rem;
   font-size: 1rem;
   line-height: 1.75;
@@ -54,7 +54,7 @@ Left Column
 /* 
 Stats row 
 */
-.hero__stats {
+.hero_stats {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem 3rem;
@@ -66,7 +66,7 @@ Stats row
   animation: fadeUp 0.7s 0.8s var(--ease) forwards;
 }
 
-.stat__number {
+.stat_number {
   display: block;
   font-family: var(--font-display);
   font-size: 2.2rem;
@@ -74,7 +74,7 @@ Stats row
   color: var(--charcoal);
   line-height: 1;
 }
-.stat__label {
+.stat_label {
   display: block;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
@@ -86,7 +86,7 @@ Stats row
 /* 
 CTA arrow link 
 */
-.hero__cta {
+.hero_cta {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -104,7 +104,7 @@ CTA arrow link
     gap 0.2s,
     color 0.2s;
 }
-.hero__cta:hover {
+.hero_cta:hover {
   color: var(--gold);
   gap: 1rem;
   border-color: var(--gold);
@@ -113,13 +113,13 @@ CTA arrow link
 /* 
 Right Column (Image) 
 */
-.hero__right {
+.hero_right {
   position: relative;
   background: var(--green);
   overflow: hidden;
 }
 
-.hero__bg {
+.hero_bg {
   position: absolute;
   inset: 0;
   background:
@@ -129,7 +129,7 @@ Right Column (Image)
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
-.hero__overlay {
+.hero_overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -143,7 +143,7 @@ Right Column (Image)
 /* 
 Floating property badge 
 */
-.hero__badge {
+.hero_badge {
   position: absolute;
   bottom: 3.5rem;
   left: -1.5rem;
@@ -155,13 +155,13 @@ Floating property badge
   transform: translateX(-16px);
   animation: fadeRight 0.7s 1.3s var(--ease) forwards;
 }
-.hero__badge-label {
+.hero_badge-label {
   font-size: 0.65rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
 }
-.hero__badge-price {
+.hero_badge-price {
   font-family: var(--font-display);
   font-size: 1.7rem;
   font-weight: 600;
@@ -169,7 +169,7 @@ Floating property badge
   margin-top: 0.2rem;
   line-height: 1;
 }
-.hero__badge-sub {
+.hero_badge-sub {
   font-size: 0.78rem;
   color: var(--muted);
   margin-top: 0.3rem;
@@ -178,7 +178,7 @@ Floating property badge
 /* 
 Top-right tag 
 */
-.hero__tag {
+.hero_tag {
   position: absolute;
   top: 2.5rem;
   right: 2.5rem;
@@ -197,7 +197,7 @@ Top-right tag
 /* 
 Gold accent strip 
 */
-.hero__gold-strip {
+.hero_gold-strip {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -220,15 +220,15 @@ Responsive
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  .hero__left {
+  .hero_left {
     padding-top: calc(var(--nav-h) + 3rem);
     padding-bottom: 3rem;
   }
-  .hero__right {
+  .hero_right {
     height: 60vw;
     min-height: 280px;
   }
-  .hero__badge {
+  .hero_badge {
     left: 1rem;
     bottom: 2rem;
   }

@@ -4,8 +4,8 @@ NAV.JS — Sticky nav shadow, mobile drawer, smooth scroll
 
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
-  const hamburger = document.querySelector(".nav__hamburger");
-  const drawer = document.querySelector(".nav__drawer");
+  const hamburger = document.querySelector(".nav_hamburger");
+  const drawer = document.querySelector(".nav_drawer");
 
   /* 
   Scroll shadow 

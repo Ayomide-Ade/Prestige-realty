@@ -10,7 +10,7 @@ LISTINGS.CSS — Featured Properties Section
 /* 
 Section header 
 */
-.listings__header {
+.listings_header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -19,17 +19,17 @@ Section header
   gap: 1rem;
 }
 
-.listings__header h2 {
+.listings_header h2 {
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 300;
   color: var(--charcoal);
 }
-.listings__header h2 span {
+.listings_header h2 span {
   font-style: italic;
   color: var(--rust);
 }
 
-.listings__view-all {
+.listings_view-all {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -41,7 +41,7 @@ Section header
     border-color 0.2s;
   white-space: nowrap;
 }
-.listings__view-all:hover {
+.listings_view-all:hover {
   color: var(--charcoal);
   border-color: var(--charcoal);
 }
@@ -49,7 +49,7 @@ Section header
 /* 
 Grid 
 */
-.listings__grid {
+.listings_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
@@ -75,26 +75,26 @@ Card
 /* 
 Image wrapper 
 */
-.listing-card__img-wrap {
+.listing-card_img-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.listing-card__img {
+.listing-card_img {
   width: 100%;
   height: 230px;
   object-fit: cover;
   display: block;
   transition: transform 0.55s var(--ease);
 }
-.listing-card:hover .listing-card__img {
+.listing-card:hover .listing-card_img {
   transform: scale(1.05);
 }
 
 /* 
 Status tag 
 */
-.listing-card__tag {
+.listing-card_tag {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -106,15 +106,15 @@ Status tag
   z-index: 2;
 }
 
-.listing-card__tag--featured {
+.listing-card_tag--featured {
   background: var(--gold);
   color: var(--charcoal);
 }
-.listing-card__tag--new {
+.listing-card_tag--new {
   background: var(--green);
   color: var(--cream);
 }
-.listing-card__tag--luxury {
+.listing-card_tag--luxury {
   background: var(--charcoal);
   color: var(--gold-light);
 }
@@ -122,7 +122,7 @@ Status tag
 /*
 Save / like button 
 */
-.listing-card__save {
+.listing-card_save {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -142,25 +142,25 @@ Save / like button
     transform 0.2s,
     background 0.2s;
 }
-.listing-card:hover .listing-card__save {
+.listing-card:hover .listing-card_save {
   opacity: 1;
   transform: translateY(0);
 }
-.listing-card__save:hover {
+.listing-card_save:hover {
   background: var(--warm-white);
 }
-.listing-card__save.saved {
+.listing-card_save.saved {
   color: var(--rust);
 }
 
 /* 
 Body 
 */
-.listing-card__body {
+.listing-card_body {
   padding: 1.4rem;
 }
 
-.listing-card__price {
+.listing-card_price {
   font-family: var(--font-display);
   font-size: 1.55rem;
   font-weight: 600;
@@ -168,7 +168,7 @@ Body
   line-height: 1;
 }
 
-.listing-card__address {
+.listing-card_address {
   font-size: 0.82rem;
   color: var(--muted);
   margin-top: 0.4rem;
@@ -177,7 +177,7 @@ Body
 /* 
 Specs row 
 */
-.listing-card__specs {
+.listing-card_specs {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -203,12 +203,12 @@ Specs row
 Responsive 
 */
 @media (max-width: 860px) {
-  .listings__grid {
+  .listings_grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 560px) {
-  .listings__grid {
+  .listings_grid {
     grid-template-columns: 1fr;
   }
 }

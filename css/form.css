@@ -37,17 +37,17 @@ Decorative large background text
 /* 
 Left: Pitch copy 
 */
-.form__pitch h2 {
+.form_pitch h2 {
   font-size: clamp(2.2rem, 3.5vw, 3.4rem);
   font-weight: 300;
   color: var(--cream);
 }
-.form__pitch h2 em {
+.form_pitch h2 em {
   font-style: italic;
   color: var(--gold-light);
 }
 
-.form__pitch p {
+.form_pitch p {
   margin-top: 1.4rem;
   font-size: 0.92rem;
   line-height: 1.8;
@@ -55,7 +55,7 @@ Left: Pitch copy
   max-width: 380px;
 }
 
-.form__features {
+.form_features {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
@@ -70,7 +70,7 @@ Left: Pitch copy
   color: rgba(245, 240, 232, 0.65);
 }
 
-.feature-item__icon {
+.feature-item_icon {
   width: 34px;
   height: 34px;
   border: 1px solid rgba(201, 168, 76, 0.35);
@@ -83,7 +83,7 @@ Left: Pitch copy
     background 0.2s,
     border-color 0.2s;
 }
-.feature-item:hover .feature-item__icon {
+.feature-item:hover .feature-item_icon {
   background: rgba(201, 168, 76, 0.1);
   border-color: var(--gold);
 }
@@ -91,7 +91,7 @@ Left: Pitch copy
 /* 
 Divider line 
 */
-.form__divider {
+.form_divider {
   width: 48px;
   height: 1px;
   background: rgba(201, 168, 76, 0.4);
@@ -101,7 +101,7 @@ Divider line
 /* 
 Right: Form card 
 */
-.form__card {
+.form_card {
   background: var(--cream);
   padding: clamp(2rem, 4vw, 3rem);
   position: relative;
@@ -110,7 +110,7 @@ Right: Form card
 /* 
 Offset border decoration 
 */
-.form__card::before {
+.form_card::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -121,11 +121,11 @@ Offset border decoration
   pointer-events: none;
   transition: border-color 0.3s;
 }
-.form__card:hover::before {
+.form_card:hover::before {
   border-color: rgba(201, 168, 76, 0.55);
 }
 
-.form__card-title {
+.form_card-title {
   font-family: var(--font-display);
   font-size: 1.65rem;
   font-weight: 400;
@@ -133,7 +133,7 @@ Offset border decoration
   margin-bottom: 0.3rem;
 }
 
-.form__card-sub {
+.form_card-sub {
   font-size: 0.82rem;
   color: var(--muted);
   margin-bottom: 2rem;
@@ -142,17 +142,17 @@ Offset border decoration
 /* 
 Form layout
 */
-.form__row {
+.form_row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.form__group {
+.form_group {
   margin-bottom: 1.1rem;
 }
 
-.form__group label {
+.form_group label {
   display: block;
   font-size: 0.68rem;
   font-weight: 500;
@@ -165,7 +165,7 @@ Form layout
 /* 
 Required marker 
 */
-.form__group label .req {
+.form_group label .req {
   color: var(--rust);
   margin-left: 2px;
 }
@@ -173,9 +173,9 @@ Required marker
 /* 
 Inputs 
 */
-.form__group input,
-.form__group select,
-.form__group textarea {
+.form_group input,
+.form_group select,
+.form_group textarea {
   width: 100%;
   padding: 0.85rem 1rem;
   border: 1px solid var(--border);
@@ -191,14 +191,14 @@ Inputs
   border-radius: 0;
 }
 
-.form__group input::placeholder,
-.form__group textarea::placeholder {
+.form_group input::placeholder,
+.form_group textarea::placeholder {
   color: rgba(107, 104, 96, 0.5);
 }
 
-.form__group input:focus,
-.form__group select:focus,
-.form__group textarea:focus {
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
 }
@@ -206,24 +206,24 @@ Inputs
 /* 
 Error state 
 */
-.form__group input.error,
-.form__group select.error {
+.form_group input.error,
+.form_group select.error {
   border-color: var(--rust);
 }
-.form__error-msg {
+.form_error-msg {
   display: none;
   font-size: 0.7rem;
   color: var(--rust);
   margin-top: 0.3rem;
 }
-.form__group.has-error .form__error-msg {
+.form_group.has-error .form_error-msg {
   display: block;
 }
 
 /* 
 Select arrow 
 */
-.form__group select {
+.form_group select {
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6860' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -231,7 +231,7 @@ Select arrow
   padding-right: 2.5rem;
 }
 
-.form__group textarea {
+.form_group textarea {
   resize: vertical;
   min-height: 90px;
 }
@@ -239,7 +239,7 @@ Select arrow
 /* 
 Submit button 
 */
-.form__submit {
+.form_submit {
   width: 100%;
   margin-top: 1.4rem;
   padding: 1.1rem;
@@ -256,7 +256,7 @@ Submit button
   transition: color 0.3s;
 }
 
-.form__submit::before {
+.form_submit::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -266,17 +266,17 @@ Submit button
   transition: transform 0.4s var(--ease);
 }
 
-.form__submit:hover::before {
+.form_submit:hover::before {
   transform: scaleX(1);
 }
-.form__submit:hover {
+.form_submit:hover {
   color: var(--charcoal);
 }
-.form__submit:active {
+.form_submit:active {
   transform: scale(0.99);
 }
 
-.form__submit span {
+.form_submit span {
   position: relative;
   z-index: 1;
 }
@@ -284,19 +284,19 @@ Submit button
 /* 
 Loading state 
 */
-.form__submit.loading .btn-text {
+.form_submit.loading .btn-text {
   display: none;
 }
-.form__submit .btn-loader {
+.form_submit .btn-loader {
   display: none;
   position: relative;
   z-index: 1;
 }
-.form__submit.loading .btn-loader {
+.form_submit.loading .btn-loader {
   display: inline-block;
 }
 
-.form__privacy {
+.form_privacy {
   font-size: 0.7rem;
   text-align: center;
   color: var(--muted);
@@ -306,30 +306,30 @@ Loading state
 /* 
 Success state
 */
-.form__success {
+.form_success {
   display: none;
   text-align: center;
   padding: 3rem 1.5rem;
 }
 
-.form__success.visible {
+.form_success.visible {
   display: block;
 }
 
-.success__icon {
+.success_icon {
   font-size: 2.2rem;
   color: var(--gold);
   margin-bottom: 1rem;
 }
 
-.form__success h4 {
+.form_success h4 {
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--charcoal);
 }
 
-.form__success p {
+.form_success p {
   font-size: 0.88rem;
   color: var(--muted);
   margin-top: 0.6rem;
@@ -343,13 +343,13 @@ Responsive
   .form-section .container {
     grid-template-columns: 1fr;
   }
-  .form__pitch p {
+  .form_pitch p {
     max-width: 100%;
   }
 }
 
 @media (max-width: 560px) {
-  .form__row {
+  .form_row {
     grid-template-columns: 1fr;
   }
 }

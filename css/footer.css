@@ -17,7 +17,7 @@ FOOTER.CSS — Site Footer
 /* 
 Brand column 
 */
-.footer__logo {
+.footer_logo {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 600;
@@ -26,24 +26,24 @@ Brand column
   display: inline-block;
   margin-bottom: 1rem;
 }
-.footer__logo span {
+.footer_logo span {
   color: var(--gold);
 }
 
-.footer__tagline {
+.footer_tagline {
   font-size: 0.82rem;
   line-height: 1.7;
   color: rgba(245, 240, 232, 0.4);
   max-width: 220px;
 }
 
-.footer__social {
+.footer_social {
   display: flex;
   gap: 0.8rem;
   margin-top: 1.5rem;
 }
 
-.footer__social a {
+.footer_social a {
   width: 34px;
   height: 34px;
   border: 1px solid rgba(245, 240, 232, 0.12);
@@ -56,7 +56,7 @@ Brand column
     color 0.2s,
     background 0.2s;
 }
-.footer__social a:hover {
+.footer_social a:hover {
   border-color: var(--gold);
   color: var(--gold);
   background: rgba(201, 168, 76, 0.07);
@@ -65,7 +65,7 @@ Brand column
 /* 
 Link columns 
 */
-.footer__col-title {
+.footer_col-title {
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -74,19 +74,19 @@ Link columns
   margin-bottom: 1.2rem;
 }
 
-.footer__links {
+.footer_links {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
-.footer__links a {
+.footer_links a {
   font-size: 0.82rem;
   color: rgba(245, 240, 232, 0.4);
   transition:
     color 0.2s,
     padding-left 0.2s;
 }
-.footer__links a:hover {
+.footer_links a:hover {
   color: var(--gold-light);
   padding-left: 4px;
 }
@@ -94,7 +94,7 @@ Link columns
 /* 
 Bottom bar 
 */
-.footer__bottom {
+.footer_bottom {
   margin-top: 3.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(245, 240, 232, 0.07);
@@ -105,21 +105,21 @@ Bottom bar
   gap: 1rem;
 }
 
-.footer__copyright {
+.footer_copyright {
   font-size: 0.73rem;
   color: rgba(245, 240, 232, 0.3);
 }
 
-.footer__legal {
+.footer_legal {
   display: flex;
   gap: 1.8rem;
 }
-.footer__legal a {
+.footer_legal a {
   font-size: 0.73rem;
   color: rgba(245, 240, 232, 0.3);
   transition: color 0.2s;
 }
-.footer__legal a:hover {
+.footer_legal a:hover {
   color: var(--gold);
 }
 
@@ -135,11 +135,11 @@ Responsive
   .footer .container {
     grid-template-columns: 1fr;
   }
-  .footer__bottom {
+  .footer_bottom {
     flex-direction: column;
     text-align: center;
   }
-  .footer__legal {
+  .footer_legal {
     justify-content: center;
   }
 }

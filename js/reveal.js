@@ -13,7 +13,6 @@
   Check for browser support 
   */
   if (!("IntersectionObserver" in window)) {
-    /* Fallback: just make everything visible */
     document.querySelectorAll(".reveal").forEach(function (el) {
       el.classList.add("visible");
     });
@@ -25,7 +24,6 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          /* Unobserve after reveal — no need to watch it further */
           observer.unobserve(entry.target);
         }
       });

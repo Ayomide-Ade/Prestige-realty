@@ -75,16 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function showError({ field, msg }) {
     field.classList.add("error");
-    const group = field.closest(".form__group");
+    const group = field.closest(".form_group");
     if (group) {
       group.classList.add("has-error");
-      const errEl = group.querySelector(".form__error-msg");
+      const errEl = group.querySelector(".form_error-msg");
       if (errEl) errEl.textContent = msg;
     }
   }
 
   function clearErrors() {
-    document.querySelectorAll(".form__group").forEach((group) => {
+    document.querySelectorAll(".form_group").forEach((group) => {
       group.classList.remove("has-error");
     });
     document.querySelectorAll(".error").forEach((el) => {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach((field) => {
       field.addEventListener("input", () => {
         field.classList.remove("error");
-        const group = field.closest(".form__group");
+        const group = field.closest(".form_group");
         if (group) group.classList.remove("has-error");
       });
     });
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* 
   SAVE / LIKE BUTTONS on cards
   */
-  document.querySelectorAll(".listing-card__save").forEach((btn) => {
+  document.querySelectorAll(".listing-card_save").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation(); // don't bubble to card click
       btn.classList.toggle("saved");
