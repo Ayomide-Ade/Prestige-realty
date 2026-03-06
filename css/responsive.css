@@ -151,7 +151,7 @@ Small phones
   }
 
   .footer-cols {
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   .stats-strip {

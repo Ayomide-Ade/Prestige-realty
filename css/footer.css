@@ -123,23 +123,29 @@ Bottom bar
   color: var(--gold);
 }
 
-/*
-Responsive 
-*/
+/* Responsive */
 @media (max-width: 860px) {
+  .footer .container {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 560px) {
   .footer .container {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 560px) {
-  .footer .container {
-    grid-template-columns: 1fr;
-  }
-  .footer_bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer_legal {
-    justify-content: center;
-  }
+
+.footer_bottom {
+  margin-top: 1.5rem; /* was 3.5rem — too much on mobile */
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer_legal {
+  justify-content: center;
 }
