@@ -11,7 +11,7 @@
 
   const revealEls = document.querySelectorAll('.reveal');
 
-  // Respect user preference — skip animation and show elements immediately
+  // Respect user preference, skip animation and show elements immediately
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     revealEls.forEach(el => el.classList.add('visible'));
     return;
