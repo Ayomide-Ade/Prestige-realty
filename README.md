@@ -115,7 +115,6 @@ Hosted on GitHub Pages. To deploy your own copy:
 
 If you're a recruiter, client, or fellow developer and you'd like to work together or discuss this project, feel free to reach out.
 
-- **GitHub:** [https://github.com/Ayomide-Ade](https://github.com/Ayomide-Ade)
 - **Email:** ayoa88463@gmail.com
 
 ---
