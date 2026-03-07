@@ -29,7 +29,7 @@
   bottom: 0; left: 0;
   width: 0; height: 1px;
   background: var(--gold);
-  transition: width 0.25s var(--ease);
+  transition: width 0.35s var(--ease);
 }
 .nav_links a:hover { color: var(--charcoal); }
 .nav_links a:hover::after { width: 100%; }
@@ -45,7 +45,7 @@
   background: transparent;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.25s, color 0.25s;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease);
 }
 .nav_cta:hover { background: var(--charcoal); color: var(--cream); }
 
@@ -56,7 +56,12 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
+  margin: -8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 .nav_hamburger span {
   display: block;
@@ -69,14 +74,26 @@
 .nav_hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .nav_drawer a {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  padding-bottom: 1rem;
+  padding: 0.9rem 0;
   border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
 }
+.nav_drawer a:last-child {
+  border-bottom: none;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  background: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.nav_drawer a:hover { color: var(--charcoal); }
+.nav_drawer a:last-child:hover { background: var(--gold); color: var(--charcoal); }
 
 /* Hero */
 .hero_eyebrow {
@@ -134,7 +151,7 @@
   padding-bottom: 3px;
   opacity: 0;
   animation: fadeIn 0.6s 1.1s ease both;
-  transition: gap 0.2s, color 0.2s;
+  transition: gap 0.4s var(--ease), color 0.3s, border-color 0.3s;
 }
 .hero_cta:hover { color: var(--gold); gap: 1rem; border-color: var(--gold); }
 
@@ -161,7 +178,9 @@
   background:
     linear-gradient(160deg, rgba(45, 74, 62, 0.5) 0%, transparent 55%),
     url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=80") center / cover no-repeat;
-  animation: slowZoom 20s ease-in-out infinite alternate;
+  animation: slowZoom 24s ease-in-out infinite alternate;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 .hero_overlay {
   position: absolute;
@@ -357,17 +376,27 @@
   background: var(--warm-white);
   cursor: pointer;
   position: relative;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  will-change: transform;
+  backface-visibility: hidden;
 }
-.listing-card:hover { transform: translateY(-8px); box-shadow: 0 28px 64px rgba(0, 0, 0, 0.1); }
-.listing-card_img-wrap { position: relative; overflow: hidden; }
+.listing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.09);
+}
+.listing-card_img-wrap {
+  position: relative;
+  overflow: hidden;
+}
 .listing-card_img {
   width: 100%; height: 230px;
   object-fit: cover;
   display: block;
-  transition: transform 0.55s var(--ease);
+  transition: transform 0.6s var(--ease);
+  will-change: transform;
+  backface-visibility: hidden;
 }
-.listing-card:hover .listing-card_img { transform: scale(1.05); }
+.listing-card:hover .listing-card_img { transform: scale(1.04); }
 
 .listing-card_tag {
   position: absolute;
@@ -395,8 +424,8 @@
   font-size: 1rem;
   z-index: 2;
   opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  transform: translateY(-6px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), background 0.25s;
 }
 .listing-card:hover .listing-card_save { opacity: 1; transform: translateY(0); }
 .listing-card_save:hover { background: var(--warm-white); }
@@ -521,7 +550,7 @@
   place-items: center;
   margin: 0 auto 1.8rem;
   background: var(--charcoal);
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 .process-step:hover .process-step_number {
   background: rgba(201, 168, 76, 0.1);
@@ -538,9 +567,9 @@
   background: var(--cream);
   padding: 2.2rem 2rem;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
-.testimonial-card:hover { border-color: var(--gold); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07); }
+.testimonial-card:hover { border-color: var(--gold); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06); }
 .testimonial-card_stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
 .testimonial-card_quote {
   font-family: var(--font-display);
@@ -579,7 +608,9 @@
   width: 100%; height: 100%;
   object-fit: cover;
   filter: grayscale(20%);
-  transition: transform 0.6s var(--ease), filter 0.4s;
+  transition: transform 0.7s var(--ease), filter 0.5s ease;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 .agent_photo-wrap:hover img { transform: scale(1.04); filter: grayscale(0%); }
 .agent_photo::after {
@@ -680,7 +711,7 @@
 /* ── Mobile overrides ──────────────────────────────────────────── */
 
 @media (max-width: 560px) {
-  /* Hero */
+  /* Hero — ensure animated elements are visible regardless of animation state */
   .hero_eyebrow,
   .hero_title,
   .hero_sub,
