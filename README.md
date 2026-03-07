@@ -1,8 +1,8 @@
-# Prestige Realty — Real Estate Lead Capture Landing Page
+# Prestige Realty  Real Estate Lead Capture Landing Page
 
 A responsive, multi-file real estate landing page built with vanilla HTML, CSS, and JavaScript. Designed as a portfolio project and deployable on GitHub Pages with zero build tools or dependencies.
 
-> Built by **Ayomide Adesina** — Frontend & Backend Developer
+> Built by **Ayomide Adesina**  Frontend & Backend Developer
 
 ---
 
@@ -14,9 +14,9 @@ A responsive, multi-file real estate landing page built with vanilla HTML, CSS, 
 
 ## About Me
 
-Hi, I'm Ayomide — a junior full-stack developer with a passion for building clean, functional web experiences. I work across the full stack, from crafting pixel-precise interfaces in HTML, CSS, and JavaScript to building server-side logic with Node.js and Python, backed by MySQL databases.
+Hi, I'm Ayomide  a junior full-stack developer with a passion for building clean, functional web experiences. I work across the full stack, from crafting pixel-precise interfaces in HTML, CSS, and JavaScript to building server-side logic with Node.js and Python, backed by MySQL databases.
 
-This project is a demonstration of my frontend skills — specifically my ability to build structured, well-designed, and responsive user interfaces without relying on frameworks or libraries.
+This project is a demonstration of my frontend skills  specifically my ability to build structured, well-designed, and responsive user interfaces without relying on frameworks or libraries.
 
 **What I work with:**
 
@@ -30,9 +30,9 @@ This project is a demonstration of my frontend skills — specifically my abilit
 
 ## About This Project
 
-**Prestige Realty** is a real estate lead capture landing page. It was built entirely from scratch to demonstrate what I can produce with core frontend skills — no frameworks, no build tools, just clean and organised code.
+**Prestige Realty** is a real estate lead capture landing page. It was built entirely from scratch to demonstrate what I can produce with core frontend skills  no frameworks, no build tools, just clean and organised code.
 
-The goal was to show that I understand not just how to write HTML, CSS, and JavaScript, but how to structure a project properly — separating concerns across multiple files the way a real production codebase would be organised.
+The goal was to show that I understand not just how to write HTML, CSS, and JavaScript, but how to structure a project properly  separating concerns across multiple files the way a real production codebase would be organised.
 
 ### What This Project Demonstrates
 
@@ -55,7 +55,7 @@ prestige-realty/
 ├── index.html              # Page structure and content
 │
 ├── css/
-│   ├── variables.css       # Design tokens — colours, fonts, spacing
+│   ├── variables.css       # Design tokens  colours, fonts, spacing
 │   ├── base.css            # Reset + shared reusable styles
 │   ├── nav.css             # Navigation bar
 │   ├── hero.css            # Hero section
@@ -107,7 +107,7 @@ Hosted on GitHub Pages. To deploy your own copy:
 1. Push to a GitHub repository
 2. Go to **Settings → Pages**
 3. Set branch to `main`, folder to `/` (root)
-4. Save — live in under a minute
+4. Save  live in under a minute
 
 ---
 

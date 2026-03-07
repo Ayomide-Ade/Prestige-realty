@@ -1,60 +1,41 @@
 /*
-   reveal.js — Scroll-triggered animations
-   Uses IntersectionObserver to add the
-   .visible class when elements enter the
-   viewport, triggering the CSS transition
-   defined in animations.css
+  reveal.js
+  Handles scroll-based reveal animations.
+
+  Elements with the `.reveal` class are observed using IntersectionObserver.
+  When they enter the viewport, `.visible` is applied to trigger the CSS transition.
 */
 
-(function () {
-  "use strict";
+(() => {
+  'use strict';
 
-  /* 
-  Check for browser support 
-  */
-  if (!("IntersectionObserver" in window)) {
-    document.querySelectorAll(".reveal").forEach(function (el) {
-      el.classList.add("visible");
-    });
+  const revealEls = document.querySelectorAll('.reveal');
+
+  // Respect user preference — skip animation and show elements immediately
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealEls.forEach(el => el.classList.add('visible'));
     return;
   }
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -40px 0px",
-    },
-  );
+  // Fallback for browsers without IntersectionObserver support
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('visible'));
+    return;
+  }
 
-  /* 
-  Observe every element with the .reveal class 
-  */
-  document.querySelectorAll(".reveal").forEach(function (el) {
-    observer.observe(el);
-  });
-
-  /*
-  Save / wishlist toggle on property cards 
-  */
-  document.querySelectorAll(".card-save").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      var isSaved = this.classList.toggle("saved");
-      this.textContent = isSaved ? "♥" : "♡";
-      this.setAttribute(
-        "aria-label",
-        isSaved ? "Remove from saved" : "Save listing",
-      );
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting === true) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    // Trigger when ~12% of the element is visible
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px',
   });
+
+  // Observe all elements that should animate on scroll
+  revealEls.forEach(el => observer.observe(el));
 })();

@@ -1,5 +1,6 @@
 /*
-NAV.JS — Sticky nav shadow, mobile drawer, smooth scroll
+  nav.js
+  Handles sticky nav shadow, mobile drawer toggle, and smooth anchor scrolling.
 */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -7,52 +8,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".nav_hamburger");
   const drawer = document.querySelector(".nav_drawer");
 
-  /* 
-  Scroll shadow 
-  */
   function onScroll() {
-    if (window.scrollY > 20) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
+    nav.classList.toggle("scrolled", window.scrollY > 20);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 
-  /* 
-  Mobile hamburger toggle 
-  */
   if (hamburger && drawer) {
     hamburger.addEventListener("click", () => {
       const isOpen = hamburger.classList.toggle("open");
       drawer.classList.toggle("open", isOpen);
-      // Prevent body scroll when drawer is open
+      hamburger.setAttribute("aria-expanded", isOpen);
       document.body.style.overflow = isOpen ? "hidden" : "";
     });
 
-    // Close drawer when a link is clicked
     drawer.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("open");
-        drawer.classList.remove("open");
-        document.body.style.overflow = "";
-      });
+      link.addEventListener("click", () => closeDrawer());
     });
 
-    // Close drawer on outside click
     document.addEventListener("click", (e) => {
       if (!nav.contains(e.target) && !drawer.contains(e.target)) {
-        hamburger.classList.remove("open");
-        drawer.classList.remove("open");
-        document.body.style.overflow = "";
+        closeDrawer();
       }
     });
   }
 
-  /* 
-  Smooth anchor scroll with nav offset 
-  */
+  function closeDrawer() {
+    hamburger.classList.remove("open");
+    drawer.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", false);
+    document.body.style.overflow = "";
+  }
+
+  // Smooth scroll to anchor targets, offset by nav height
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const targetId = anchor.getAttribute("href");
@@ -65,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const navHeight = nav ? nav.offsetHeight : 72;
       const targetY =
         target.getBoundingClientRect().top + window.scrollY - navHeight;
-
       window.scrollTo({ top: targetY, behavior: "smooth" });
     });
   });

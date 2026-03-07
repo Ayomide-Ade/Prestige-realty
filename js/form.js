@@ -1,15 +1,21 @@
-/* 
-FORM.JS — Lead form validation, submission & save buttons
- */
+/*
+  form.js
+  Handles lead form validation, submission state, and listing save buttons.
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* 
-  LEAD FORM
-  */
   const form = document.getElementById("leadForm");
   const submitBtn = document.getElementById("formSubmit");
   const formInner = document.getElementById("formInner");
   const successMsg = document.getElementById("formSuccess");
+
+  // Cache required field references to avoid repeated DOM lookups
+  const fields = {
+    fname: document.getElementById("fname"),
+    lname: document.getElementById("lname"),
+    email: document.getElementById("email"),
+    intent: document.getElementById("intent"),
+  };
 
   if (form) {
     form.addEventListener("submit", handleSubmit);
@@ -17,50 +23,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    // Clear previous errors
     clearErrors();
 
-    // Validate fields
     const errors = validateForm();
     if (errors.length > 0) {
       errors.forEach(showError);
       return;
     }
 
-    // Simulate async submission
+    // Simulate async submission , replace with real fetch() call when backend is ready
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false);
       showSuccess();
     }, 1500);
   }
 
-  /* 
-  Validation rules
-   */
+  // Returns an array of { field, msg } objects for any failing fields
   function validateForm() {
     const errors = [];
 
-    const fname = document.getElementById("fname");
-    const lname = document.getElementById("lname");
-    const email = document.getElementById("email");
-    const intent = document.getElementById("intent");
-
-    if (!fname.value.trim()) {
-      errors.push({ field: fname, msg: "First name is required." });
+    if (!fields.fname.value.trim()) {
+      errors.push({ field: fields.fname, msg: "First name is required." });
     }
-    if (!lname.value.trim()) {
-      errors.push({ field: lname, msg: "Last name is required." });
+    if (!fields.lname.value.trim()) {
+      errors.push({ field: fields.lname, msg: "Last name is required." });
     }
-    if (!email.value.trim()) {
-      errors.push({ field: email, msg: "Email address is required." });
-    } else if (!isValidEmail(email.value.trim())) {
-      errors.push({ field: email, msg: "Please enter a valid email." });
+    if (!fields.email.value.trim()) {
+      errors.push({ field: fields.email, msg: "Email address is required." });
+    } else if (!isValidEmail(fields.email.value.trim())) {
+      errors.push({ field: fields.email, msg: "Please enter a valid email." });
     }
-    if (!intent.value) {
-      errors.push({ field: intent, msg: "Please select an option." });
+    if (!fields.intent.value) {
+      errors.push({ field: fields.intent, msg: "Please select an option." });
     }
 
     return errors;
@@ -70,17 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   }
 
-  /*
-   Error display
-   */
   function showError({ field, msg }) {
     field.classList.add("error");
     const group = field.closest(".form_group");
-    if (group) {
-      group.classList.add("has-error");
-      const errEl = group.querySelector(".form_error-msg");
-      if (errEl) errEl.textContent = msg;
-    }
+    if (!group) return;
+    group.classList.add("has-error");
+    const errEl = group.querySelector(".form_error-msg");
+    if (errEl) errEl.textContent = msg;
   }
 
   function clearErrors() {
@@ -92,9 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* 
-  Remove error on input
-  */
+  // Clear field error as soon as the user starts correcting it
   document
     .querySelectorAll("#leadForm input, #leadForm select")
     .forEach((field) => {
@@ -105,39 +94,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  /* 
-  Loading state
-  */
   function setLoading(isLoading) {
     if (!submitBtn) return;
-    if (isLoading) {
-      submitBtn.classList.add("loading");
-      submitBtn.disabled = true;
-      submitBtn.querySelector(".btn-text").textContent = "Sending…";
-    } else {
-      submitBtn.classList.remove("loading");
-      submitBtn.disabled = false;
-      submitBtn.querySelector(".btn-text").textContent = "Send My Request →";
-    }
+    submitBtn.classList.toggle("loading", isLoading);
+    submitBtn.disabled = isLoading;
   }
 
-  /* 
-  Success state 
-  */
   function showSuccess() {
     if (formInner) formInner.style.display = "none";
     if (successMsg) successMsg.classList.add("visible");
   }
 
-  /* 
-  SAVE / LIKE BUTTONS on cards
-  */
+  // Wishlist toggle
   document.querySelectorAll(".listing-card_save").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // don't bubble to card click
-      btn.classList.toggle("saved");
-      btn.textContent = btn.classList.contains("saved") ? "♥" : "♡";
-      btn.title = btn.classList.contains("saved") ? "Saved" : "Save listing";
-    });
+    btn.addEventListener("click", toggleSave);
   });
+
+  function toggleSave(e) {
+    e.stopPropagation();
+    const isSaved = this.classList.toggle("saved");
+    this.textContent = isSaved ? "♥" : "♡";
+    this.setAttribute(
+      "aria-label",
+      isSaved ? "Remove from saved" : "Save listing",
+    );
+  }
 });

@@ -1,12 +1,47 @@
-/*
-BASE.CSS — Reset, CSS Variables, Typography, Utilities
-*/
+/* base.css
+   Design tokens, reset, typography, keyframes */
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap");
+:root {
+  /* Colours */
+  --cream: #f5f0e8;
+  --warm-white: #faf8f4;
+  --charcoal: #1c1c1a;
+  --muted: #6b6860;
+  --gold: #c9a84c;
+  --gold-light: #e8d08a;
+  --gold-dim: rgba(201, 168, 76, 0.2);
+  --rust: #9b4f2a;
+  --green: #2d4a3e;
+  --border: rgba(28, 28, 26, 0.12);
+  --border-light: rgba(28, 28, 26, 0.07);
 
-/* 
-Reset 
-*/
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 3.2rem;
+  --space-xl: 6rem;
+
+  /* Misc */
+  --nav-h: 72px;
+  --max-w: 1200px;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --shadow-card: 0 16px 48px rgba(0, 0, 0, 0.08);
+  --shadow-lift: 0 28px 64px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 4rem;
+    --space-lg: 2.4rem;
+  }
+}
+
+/* Reset */
 *,
 *::before,
 *::after {
@@ -36,38 +71,14 @@ textarea {
   font-family: inherit;
 }
 
-/* 
-CSS Variables 
-*/
-:root {
-  --cream: #f5f0e8;
-  --warm-white: #faf8f4;
-  --charcoal: #1c1c1a;
-  --muted: #6b6860;
-  --gold: #c9a84c;
-  --gold-light: #e8d08a;
-  --rust: #9b4f2a;
-  --green: #2d4a3e;
-  --border: rgba(28, 28, 26, 0.12);
-  --border-light: rgba(28, 28, 26, 0.07);
-
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "DM Sans", sans-serif;
-
-  --space-xs: 0.4rem;
-  --space-sm: 0.8rem;
-  --space-md: 1.6rem;
-  --space-lg: 3.2rem;
-  --space-xl: 6rem;
-
-  --nav-h: 72px;
-  --max-w: 1200px;
-  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Focus styles */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
-/* 
-Base 
-*/
+/* Base typography */
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -75,13 +86,6 @@ body {
   background: var(--warm-white);
   color: var(--charcoal);
   overflow-x: hidden;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: clamp(1.5rem, 5vw, 5rem);
 }
 
 h1,
@@ -93,46 +97,7 @@ h4 {
   line-height: 1.1;
 }
 
-/* 
-Eyebrow label 
-*/
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.eyebrow::before {
-  content: "";
-  display: block;
-  width: 36px;
-  height: 1px;
-  background: var(--gold);
-  flex-shrink: 0;
-}
-
-/* 
-Scroll-reveal utility 
-*/
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity 0.7s var(--ease),
-    transform 0.7s var(--ease);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 
-Keyframes 
-*/
+/* Keyframes */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -169,10 +134,42 @@ Keyframes
     transform: scale(1.08);
   }
 }
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.15);
+  }
+}
 
-@media (max-width: 768px) {
-  :root {
-    --space-xl: 4rem;
-    --space-lg: 2.4rem;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero_eyebrow,
+  .hero_title,
+  .hero_sub,
+  .hero_stats,
+  .btn-primary,
+  .hero_cta,
+  .hero_badge,
+  .hero_tag {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero_bg {
+    animation: none !important;
+  }
+  .reveal {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
   }
 }

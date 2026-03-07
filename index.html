@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Prestige Realty. Find your dream home today."
+      content="Prestige Realty, Luxury homes and investment properties across Ikoyi, Victoria Island, and Maitama."
     />
     <title>Prestige Realty</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,414 +17,684 @@
       rel="stylesheet"
     />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="stylesheet" href="css/listings.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
   </head>
   <body>
     <!-- Navigation -->
     <header class="nav" role="banner">
-      <a href="#" class="nav_logo" aria-label="Prestige Realty home">
+      <a
+        href="javascript:void(0)"
+        class="nav_logo"
+        aria-label="Prestige Realty home"
+      >
         Prestige<span>.</span>Realty
       </a>
-
       <nav aria-label="Primary navigation">
         <ul class="nav_links">
-          <li><a href="#">Buy</a></li>
-          <li><a href="#">Sell</a></li>
-          <li><a href="#">Rent</a></li>
+          <li><a href="javascript:void(0)">Buy</a></li>
+          <li><a href="javascript:void(0)">Sell</a></li>
+          <li><a href="javascript:void(0)">Rent</a></li>
           <li><a href="#listings">Listings</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="javascript:void(0)">About</a></li>
         </ul>
       </nav>
-
-      <a href="#contact" class="nav_cta">Get in Touch</a>
-
+      <a href="#contact" class="nav_cta">Book a Consultation</a>
       <button
         class="nav_hamburger"
         aria-label="Toggle menu"
         aria-expanded="false"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </header>
 
-    <!-- Mobile drawer -->
     <nav class="nav_drawer" aria-label="Mobile navigation">
-      <a href="#">Buy</a>
-      <a href="#">Sell</a>
-      <a href="#">Rent</a>
+      <a href="javascript:void(0)">Buy</a>
+      <a href="javascript:void(0)">Sell</a>
+      <a href="javascript:void(0)">Rent</a>
       <a href="#listings">Listings</a>
-      <a href="#">About</a>
-      <a href="#contact">Get in Touch</a>
+      <a href="javascript:void(0)">About</a>
+      <a href="#contact">Book a Consultation</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero_left">
-        <div class="eyebrow hero_eyebrow">Lagos &amp; Abuja Markets by Ayallen1</div>
-
-        <h1 class="hero_title" id="hero-title">
-          Find the Home<br />
-          You've <em>Always</em><br />
-          Imagined
-        </h1>
-
-        <p class="hero_sub">
-          Premium properties curated for discerning buyers. From waterfront
-          estates to city penthouses, your next chapter starts here.
-        </p>
-
-        <div class="hero_stats" aria-label="Company statistics">
-          <div class="stat-item">
-            <span class="stat_number">840+</span>
-            <span class="stat_label">Active Listings</span>
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero_left">
+          <div class="eyebrow hero_eyebrow">
+            Trusted by 300+ buyers across Lagos &amp; Abuja
           </div>
-          <div class="stat-item">
-            <span class="stat_number">₦2.4B</span>
-            <span class="stat_label">Sold This Year</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat_number">97%</span>
-            <span class="stat_label">Client Satisfaction</span>
-          </div>
-        </div>
-
-        <a href="#listings" class="hero_cta">View Properties &rarr;</a>
-      </div>
-
-      <div class="hero_right" role="img" aria-label="Luxury property exterior">
-        <div class="hero_bg"></div>
-        <div class="hero_overlay"></div>
-
-        <div class="hero_badge">
-          <p class="hero_badge-label">Featured Property</p>
-          <p class="hero_badge-price">&#x20A6;185,000,000</p>
-          <p class="hero_badge-sub">5 bed &middot; Banana Island, Lagos</p>
-        </div>
-
-        <div class="hero_tag">New Listing</div>
-        <div class="hero_gold-strip"></div>
-      </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="form-section" id="contact" aria-labelledby="form-title">
-      <div class="container">
-        <!-- Pitch copy -->
-        <div class="form_pitch reveal">
-          <h2 id="form-title">
-            Let's Find Your<br />
-            <em>Perfect</em> Property
-          </h2>
-          <p>
-            Tell us what you're looking for and one of our expert agents will
-            reach out within 24 hours with personally curated listings.
+          <h1 class="hero_title" id="hero-title">
+            Find the Home<br />You've <em>Always</em><br />Imagined
+          </h1>
+          <p class="hero_sub">
+            Luxury homes and investment properties across Ikoyi, Victoria
+            Island, and Maitama, exclusively curated since 2010.
           </p>
-
-          <ul class="form_features" aria-label="Why work with us">
-            <li class="feature-item">
-              <div class="feature-item_icon" aria-hidden="true">✦</div>
-              Dedicated personal agent, no call centres
-            </li>
-            <li class="feature-item">
-              <div class="feature-item_icon" aria-hidden="true">◈</div>
-              Access to off-market and pre-launch listings
-            </li>
-            <li class="feature-item">
-              <div class="feature-item_icon" aria-hidden="true">◇</div>
-              Free property valuation &amp; market report
-            </li>
-            <li class="feature-item">
-              <div class="feature-item_icon" aria-hidden="true">○</div>
-              Zero obligation, just genuine expert help
-            </li>
-          </ul>
-
-          <div class="form_divider"></div>
+          <div class="hero_stats" aria-label="Company statistics">
+            <div class="stat-item">
+              <span class="stat_number">120+</span>
+              <span class="stat_label">Luxury Homes Marketed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat_number">&#x20A6;8B+</span>
+              <span class="stat_label">Transaction Value</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat_number">Since 2010</span>
+              <span class="stat_label">Serving Lagos &amp; Abuja</span>
+            </div>
+          </div>
+          <div class="hero_actions">
+            <a href="#contact" class="btn-primary"
+              >Book a Consultation &rarr;</a
+            >
+            <a href="#listings" class="hero_cta">Browse Listings &rarr;</a>
+          </div>
         </div>
 
-        <!-- Form card -->
-        <div class="form_card reveal" style="transition-delay: 0.15s">
-          <div id="formInner">
-            <h3 class="form_card-title">Request a Consultation</h3>
-            <p class="form_card-sub">We respond within one business day.</p>
-
-            <form id="leadForm" novalidate>
-              <div class="form_row">
-                <div class="form_group">
-                  <label for="fname"
-                    >First Name <span class="req">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="fname"
-                    placeholder="Chidi"
-                    autocomplete="given-name"
-                  />
-                  <span class="form_error-msg"></span>
-                </div>
-                <div class="form_group">
-                  <label for="lname"
-                    >Last Name <span class="req">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="lname"
-                    placeholder="Okonkwo"
-                    autocomplete="family-name"
-                  />
-                  <span class="form_error-msg"></span>
-                </div>
-              </div>
-
-              <div class="form_group">
-                <label for="email"
-                  >Email Address <span class="req">*</span></label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="chidi@example.com"
-                  autocomplete="email"
-                />
-                <span class="form_error-msg"></span>
-              </div>
-
-              <div class="form_group">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="+234 800 000 0000"
-                  autocomplete="tel"
-                />
-              </div>
-
-              <div class="form_row">
-                <div class="form_group">
-                  <label for="intent"
-                    >I'm Looking To <span class="req">*</span></label
-                  >
-                  <select id="intent">
-                    <option value="">Select…</option>
-                    <option value="buy">Buy a Property</option>
-                    <option value="rent">Rent a Property</option>
-                    <option value="sell">Sell My Property</option>
-                    <option value="valuation">Get a Valuation</option>
-                    <option value="invest">Investment Advice</option>
-                  </select>
-                  <span class="form_error-msg"></span>
-                </div>
-                <div class="form_group">
-                  <label for="budget">Budget Range</label>
-                  <select id="budget">
-                    <option value="">Select…</option>
-                    <option>Under &#x20A6;30M</option>
-                    <option>&#x20A6;30M – &#x20A6;80M</option>
-                    <option>&#x20A6;80M – &#x20A6;200M</option>
-                    <option>&#x20A6;200M – &#x20A6;500M</option>
-                    <option>Above &#x20A6;500M</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form_group">
-                <label for="message">Anything else we should know?</label>
-                <textarea
-                  id="message"
-                  placeholder="Preferred location, property type, timeline…"
-                ></textarea>
-              </div>
-
-              <button type="submit" class="form_submit" id="formSubmit">
-                <span class="btn-text">Send My Request &rarr;</span>
-                <span class="btn-loader">Sending…</span>
-              </button>
-
-              <p class="form_privacy">
-                🔒 Your information is private and never shared.
-              </p>
-            </form>
+        <div
+          class="hero_right"
+          role="img"
+          aria-label="Luxury property exterior"
+        >
+          <div class="hero_bg"></div>
+          <div class="hero_overlay"></div>
+          <div class="hero_badge">
+            <p class="hero_badge-label">Featured Property</p>
+            <p class="hero_badge-price">&#x20A6;185,000,000</p>
+            <p class="hero_badge-sub">5 bed &middot; Banana Island, Lagos</p>
           </div>
+          <div class="hero_tag">New Listing</div>
+          <div class="hero_gold-strip"></div>
+        </div>
+      </section>
 
-          <!-- Success state (hidden until form submitted) -->
-          <div
-            class="form_success"
-            id="formSuccess"
-            role="alert"
-            aria-live="polite"
-          >
-            <div class="success_icon" aria-hidden="true">✦</div>
-            <h4>Thank you! We'll be in touch.</h4>
+      <!-- How It Works -->
+      <section class="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="process_header reveal">
+            <div class="eyebrow">The Process</div>
+            <h2 id="process-title">How It <em>Works</em></h2>
+          </div>
+          <div class="process_steps">
+            <div class="process-step reveal" style="--delay: 0.1s">
+              <div class="process-step_number">01</div>
+              <p class="process-step_title">Tell Us What You Need</p>
+              <p class="process-step_desc">
+                Share your preferred location, property type, budget, and
+                timeline with us.
+              </p>
+            </div>
+            <div class="process-step reveal" style="--delay: 0.2s">
+              <div class="process-step_number">02</div>
+              <p class="process-step_title">We Curate Matches</p>
+              <p class="process-step_desc">
+                Your dedicated agent handpicks properties , including off-market
+                listings not found online.
+              </p>
+            </div>
+            <div class="process-step reveal" style="--delay: 0.3s">
+              <div class="process-step_number">03</div>
+              <p class="process-step_title">Private Viewings</p>
+              <p class="process-step_desc">
+                Schedule visits at your convenience. No open houses, no crowds ,
+                just you and your agent.
+              </p>
+            </div>
+            <div class="process-step reveal" style="--delay: 0.4s">
+              <div class="process-step_number">04</div>
+              <p class="process-step_title">Close the Deal</p>
+              <p class="process-step_desc">
+                We handle the paperwork, negotiations, and legal checks so you
+                close with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book a Consultation -->
+      <section class="form-section" id="contact" aria-labelledby="form-title">
+        <div class="container">
+          <div class="form_pitch reveal">
+            <h2 id="form-title">
+              Let's Find Your<br /><em>Perfect</em> Property
+            </h2>
             <p>
-              Expect a call or email from one of our agents<br />within 24
-              hours.
+              Tell us what you're looking for and one of our expert agents will
+              reach out within 24 hours with personally curated listings from
+              Ikoyi, Victoria Island, Lekki, Maitama, and Asokoro.
             </p>
+            <ul class="form_features" aria-label="Why work with us">
+              <li class="feature-item">
+                <div class="feature-item_icon" aria-hidden="true">✦</div>
+                Dedicated personal agent, no call centres
+              </li>
+              <li class="feature-item">
+                <div class="feature-item_icon" aria-hidden="true">◈</div>
+                Access to off-market and pre-launch listings
+              </li>
+              <li class="feature-item">
+                <div class="feature-item_icon" aria-hidden="true">◇</div>
+                Free property valuation &amp; Lagos/Abuja market report
+              </li>
+              <li class="feature-item">
+                <div class="feature-item_icon" aria-hidden="true">○</div>
+                Zero obligation, just genuine expert help
+              </li>
+            </ul>
+            <div class="form_divider"></div>
+          </div>
+
+          <div class="form_card reveal" style="--delay: 0.15s">
+            <div id="formInner">
+              <h3 class="form_card-title">Book a Consultation</h3>
+              <p class="form_card-sub">We respond within one business day.</p>
+              <form id="leadForm" novalidate>
+                <div class="form_row">
+                  <div class="form_group">
+                    <label for="fname"
+                      >First Name <span class="req">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="fname"
+                      placeholder="Chidi"
+                      autocomplete="given-name"
+                    />
+                    <span class="form_error-msg"></span>
+                  </div>
+                  <div class="form_group">
+                    <label for="lname"
+                      >Last Name <span class="req">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="lname"
+                      placeholder="Okonkwo"
+                      autocomplete="family-name"
+                    />
+                    <span class="form_error-msg"></span>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <label for="email"
+                    >Email Address <span class="req">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="chidi@example.com"
+                    autocomplete="email"
+                  />
+                  <span class="form_error-msg"></span>
+                </div>
+                <div class="form_group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+234 800 000 0000"
+                    autocomplete="tel"
+                  />
+                </div>
+                <div class="form_row">
+                  <div class="form_group">
+                    <label for="intent"
+                      >I'm Looking To <span class="req">*</span></label
+                    >
+                    <select id="intent">
+                      <option value="">Select…</option>
+                      <option value="buy">Buy a Property</option>
+                      <option value="rent">Rent a Property</option>
+                      <option value="sell">Sell My Property</option>
+                      <option value="valuation">Get a Valuation</option>
+                      <option value="invest">Investment Advice</option>
+                    </select>
+                    <span class="form_error-msg"></span>
+                  </div>
+                  <div class="form_group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget">
+                      <option value="">Select…</option>
+                      <option>Under &#x20A6;30M</option>
+                      <option>&#x20A6;30M – &#x20A6;80M</option>
+                      <option>&#x20A6;80M – &#x20A6;200M</option>
+                      <option>&#x20A6;200M – &#x20A6;500M</option>
+                      <option>Above &#x20A6;500M</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form_group">
+                  <label for="message">Anything else we should know?</label>
+                  <textarea
+                    id="message"
+                    placeholder="Preferred location (Ikoyi, VI, Maitama…), property type, timeline…"
+                  ></textarea>
+                </div>
+                <button type="submit" class="form_submit" id="formSubmit">
+                  <span class="btn-text">Book My Consultation &rarr;</span>
+                  <span class="btn-loader">Sending…</span>
+                </button>
+                <p class="form_privacy">
+                  &#x1F512; Your information is private and never shared.
+                </p>
+              </form>
+            </div>
+            <div
+              class="form_success"
+              id="formSuccess"
+              role="alert"
+              aria-live="polite"
+            >
+              <div class="success_icon" aria-hidden="true">✦</div>
+              <h4>Thank you! We'll be in touch.</h4>
+              <p>
+                Expect a call or email from one of our agents<br />within 24
+                hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Listings -->
+      <section class="listings" id="listings" aria-labelledby="listings-title">
+        <div class="container">
+          <div class="listings_header">
+            <h2 id="listings-title">Featured <span>Listings</span></h2>
+            <a href="javascript:void(0)" class="listings_view-all"
+              >View All Properties &rarr;</a
+            >
+          </div>
+          <div class="listings_grid">
+            <article
+              class="listing-card reveal"
+              role="article"
+              data-img="assets/IKOYI.webp"
+              data-tag="Featured"
+              data-tag-class="listing-card_tag--featured"
+              data-price="&#x20A6;220,000,000"
+              data-address="15 Glover Road, Ikoyi, Lagos"
+              data-beds="5 Beds"
+              data-baths="4 Baths"
+              data-size="680 m²"
+            >
+              <figure class="listing-card_img-wrap">
+                <img
+                  class="listing-card_img"
+                  src="assets/IKOYI.webp"
+                  alt="Modern villa in Ikoyi, Lagos"
+                  loading="lazy"
+                />
+                <span class="listing-card_tag listing-card_tag--featured"
+                  >Featured</span
+                >
+                <button
+                  class="listing-card_save"
+                  aria-label="Save this listing"
+                >
+                  ♡
+                </button>
+              </figure>
+              <div class="listing-card_body">
+                <p class="listing-card_price">&#x20A6;220,000,000</p>
+                <p class="listing-card_address">15 Glover Road, Ikoyi, Lagos</p>
+                <ul
+                  class="listing-card_specs"
+                  aria-label="Property specifications"
+                >
+                  <li class="spec-item">🛏 5 Beds</li>
+                  <li class="spec-item">🛁 4 Baths</li>
+                  <li class="spec-item">📐 680 m²</li>
+                </ul>
+              </div>
+            </article>
+
+            <article
+              class="listing-card reveal"
+              role="article"
+              style="--delay: 0.1s"
+              data-img="assets/ABUJA.jpg"
+              data-tag="New"
+              data-tag-class="listing-card_tag--new"
+              data-price="&#x20A6;95,000,000"
+              data-address="7 Tafawa Balewa Cres., Maitama, Abuja"
+              data-beds="4 Beds"
+              data-baths="3 Baths"
+              data-size="420 m²"
+            >
+              <figure class="listing-card_img-wrap">
+                <img
+                  class="listing-card_img"
+                  src="assets/ABUJA.jpg"
+                  alt="Elegant home in Maitama, Abuja"
+                  loading="lazy"
+                />
+                <span class="listing-card_tag listing-card_tag--new">New</span>
+                <button
+                  class="listing-card_save"
+                  aria-label="Save this listing"
+                >
+                  ♡
+                </button>
+              </figure>
+              <div class="listing-card_body">
+                <p class="listing-card_price">&#x20A6;95,000,000</p>
+                <p class="listing-card_address">
+                  7 Tafawa Balewa Cres., Maitama, Abuja
+                </p>
+                <ul
+                  class="listing-card_specs"
+                  aria-label="Property specifications"
+                >
+                  <li class="spec-item">🛏 4 Beds</li>
+                  <li class="spec-item">🛁 3 Baths</li>
+                  <li class="spec-item">📐 420 m²</li>
+                </ul>
+              </div>
+            </article>
+
+            <article
+              class="listing-card reveal"
+              role="article"
+              style="--delay: 0.2s"
+              data-img="assets/VI.avif"
+              data-tag="Luxury"
+              data-tag-class="listing-card_tag--luxury"
+              data-price="&#x20A6;340,000,000"
+              data-address="Eko Atlantic, Victoria Island, Lagos"
+              data-beds="6 Beds"
+              data-baths="5 Baths"
+              data-size="900 m²"
+            >
+              <figure class="listing-card_img-wrap">
+                <img
+                  class="listing-card_img"
+                  src="assets/VI.avif"
+                  alt="Luxury penthouse at Eko Atlantic, Victoria Island"
+                  loading="lazy"
+                />
+                <span class="listing-card_tag listing-card_tag--luxury"
+                  >Luxury</span
+                >
+                <button
+                  class="listing-card_save"
+                  aria-label="Save this listing"
+                >
+                  ♡
+                </button>
+              </figure>
+              <div class="listing-card_body">
+                <p class="listing-card_price">&#x20A6;340,000,000</p>
+                <p class="listing-card_address">
+                  Eko Atlantic, Victoria Island, Lagos
+                </p>
+                <ul
+                  class="listing-card_specs"
+                  aria-label="Property specifications"
+                >
+                  <li class="spec-item">🛏 6 Beds</li>
+                  <li class="spec-item">🛁 5 Baths</li>
+                  <li class="spec-item">📐 900 m²</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Property Modal -->
+      <div
+        class="modal-overlay"
+        id="propertyModal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Property details"
+      >
+        <div class="modal">
+          <button class="modal_close" id="modalClose" aria-label="Close">
+            &times;
+          </button>
+          <img class="modal_img" id="modalImg" src="" alt="" />
+          <div class="modal_body">
+            <span class="modal_tag" id="modalTag"></span>
+            <p class="modal_price" id="modalPrice"></p>
+            <p class="modal_address" id="modalAddress"></p>
+            <ul class="modal_specs" id="modalSpecs"></ul>
+            <a href="#contact" class="modal_cta" id="modalCta"
+              >Book a Viewing &rarr;</a
+            >
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Listings -->
-    <section class="listings" id="listings" aria-labelledby="listings-title">
-      <div class="container">
-        <div class="listings_header">
-          <h2 id="listings-title">Featured <span>Listings</span></h2>
-          <a href="#" class="listings_view-all">View All Properties &rarr;</a>
+      <!-- Testimonials -->
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="testimonials_header reveal">
+            <div class="eyebrow">Client Stories</div>
+            <h2 id="testimonials-title">What Our Clients Say</h2>
+          </div>
+          <div class="testimonials_grid">
+            <div class="testimonial-card reveal" style="--delay: 0.1s">
+              <div class="testimonial-card_stars">★★★★★</div>
+              <p class="testimonial-card_quote">
+                Prestige Realty helped us secure a waterfront home in Ikoyi
+                within three weeks. The process was seamless , our agent knew
+                every property on the street.
+              </p>
+              <div class="testimonial-card_author">
+                <div class="testimonial-card_avatar">TA</div>
+                <div>
+                  <p class="testimonial-card_name">Tunde A.</p>
+                  <p class="testimonial-card_location">Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal" style="--delay: 0.2s">
+              <div class="testimonial-card_stars">★★★★★</div>
+              <p class="testimonial-card_quote">
+                I relocated from London and needed a home in Maitama fast.
+                Within 10 days I had keys to a property I never would have found
+                on my own.
+              </p>
+              <div class="testimonial-card_author">
+                <div class="testimonial-card_avatar">FO</div>
+                <div>
+                  <p class="testimonial-card_name">Funmi O.</p>
+                  <p class="testimonial-card_location">Abuja, Nigeria</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card reveal" style="--delay: 0.3s">
+              <div class="testimonial-card_stars">★★★★★</div>
+              <p class="testimonial-card_quote">
+                We sold our Victoria Island apartment above asking price. The
+                Prestige team understood the market and priced it perfectly from
+                day one.
+              </p>
+              <div class="testimonial-card_author">
+                <div class="testimonial-card_avatar">EK</div>
+                <div>
+                  <p class="testimonial-card_name">Emeka K.</p>
+                  <p class="testimonial-card_location">Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="listings_grid">
-          <!-- Card 1 -->
-          <article class="listing-card reveal" role="article">
-            <div class="listing-card_img-wrap">
+      <!-- Meet Your Advisor -->
+      <section class="agent" aria-labelledby="agent-title">
+        <div class="container">
+          <figure class="agent_photo reveal">
+            <div class="agent_photo-wrap">
               <img
-                class="listing-card_img"
-                src="assets/IKOYI.webp"
-                alt="Modern villa in Ikoyi, Lagos"
-                loading="lazy"
+                src="assets/img.jpg"
+                alt="Ayomide Ade, Luxury Property Consultant"
               />
-              <span class="listing-card_tag listing-card_tag--featured"
-                >Featured</span
-              >
-              <button
-                class="listing-card_save"
-                title="Save listing"
-                aria-label="Save this listing"
-              >
-                ♡
-              </button>
             </div>
-            <div class="listing-card_body">
-              <p class="listing-card_price">&#x20A6;220,000,000</p>
-              <p class="listing-card_address">15 Glover Road, Ikoyi, Lagos</p>
-              <ul
-                class="listing-card_specs"
-                aria-label="Property specifications"
-              >
-                <li class="spec-item">🛏 5 Beds</li>
-                <li class="spec-item">🛁 4 Baths</li>
-                <li class="spec-item">📐 680 m²</li>
-              </ul>
+            <div class="agent_badge">Lead Consultant</div>
+          </figure>
+          <div class="agent_content reveal" style="--delay: 0.15s">
+            <div class="eyebrow">Meet Your Advisor</div>
+            <h2 class="agent_name" id="agent-title">Ayomide Ade</h2>
+            <p class="agent_title">Luxury Property Consultant</p>
+            <p class="agent_bio">
+              With over 12 years navigating Lagos and Abuja's premium property
+              markets, Ayomide has guided more than 200 families to their ideal
+              homes. His network spans Ikoyi, Victoria Island, Banana Island,
+              Maitama, and Asokoro, giving clients access to listings that
+              never hit the open market.
+            </p>
+            <div class="agent_stats">
+              <div>
+                <p class="agent_stat-num">200+</p>
+                <p class="agent_stat-label">Deals Closed</p>
+              </div>
+              <div>
+                <p class="agent_stat-num">12 yrs</p>
+                <p class="agent_stat-label">Experience</p>
+              </div>
+              <div>
+                <p class="agent_stat-num">&#x20A6;8B+</p>
+                <p class="agent_stat-label">In Transactions</p>
+              </div>
             </div>
-          </article>
+            <a href="#contact" class="agent_cta"
+              >Book a Call with Ayomide &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
 
-          <!-- Card 2 -->
-          <article class="listing-card reveal" role="article">
-            <div class="listing-card_img-wrap">
-              <img
-                class="listing-card_img"
-                src="assets/ABUJA.jpg"
-                alt="Elegant home in Maitama, Abuja"
-                loading="lazy"
-              />
-              <span class="listing-card_tag listing-card_tag--new">New</span>
-              <button
-                class="listing-card_save"
-                title="Save listing"
-                aria-label="Save this listing"
-              >
-                ♡
-              </button>
-            </div>
-            <div class="listing-card_body">
-              <p class="listing-card_price">&#x20A6;95,000,000</p>
-              <p class="listing-card_address">
-                7 Tafawa Balewa Cres., Maitama, Abuja
-              </p>
-              <ul
-                class="listing-card_specs"
-                aria-label="Property specifications"
-              >
-                <li class="spec-item">🛏 4 Beds</li>
-                <li class="spec-item">🛁 3 Baths</li>
-                <li class="spec-item">📐 420 m²</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="listing-card reveal" role="article">
-            <div class="listing-card_img-wrap">
-              <img
-                class="listing-card_img"
-                src="assets/VI.avif"
-                alt="Luxury penthouse at Eko Atlantic, Victoria Island"
-                loading="lazy"
-              />
-              <span class="listing-card_tag listing-card_tag--luxury"
-                >Luxury</span
-              >
-              <button
-                class="listing-card_save"
-                title="Save listing"
-                aria-label="Save this listing"
-              >
-                ♡
-              </button>
-            </div>
-            <div class="listing-card_body">
-              <p class="listing-card_price">&#x20A6;340,000,000</p>
-              <p class="listing-card_address">
-                Eko Atlantic, Victoria Island, Lagos
-              </p>
-              <ul
-                class="listing-card_specs"
-                aria-label="Property specifications"
-              >
-                <li class="spec-item">🛏 6 Beds</li>
-                <li class="spec-item">🛁 5 Baths</li>
-                <li class="spec-item">📐 900 m²</li>
-              </ul>
-            </div>
-          </article>
+      <!-- Footer CTA -->
+      <div class="footer-cta">
+        <div class="container">
+          <h2>Ready to Find Your Next Property?</h2>
+          <p>
+            Join 300+ buyers who found their home across Lagos and Abuja with
+            Prestige Realty.
+          </p>
+          <div class="footer-cta_actions">
+            <a href="#contact" class="footer-cta_primary"
+              >Book a Consultation &rarr;</a
+            >
+            <a href="#listings" class="footer-cta_secondary"
+              >Browse Featured Listings</a
+            >
+          </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer_brand">
-          <a href="#" class="footer_logo">Prestige<span>.</span>Realty</a>
+          <a href="javascript:void(0)" class="footer_logo"
+            >Prestige<span>.</span>Realty</a
+          >
           <p class="footer_tagline">
-            Premium real estate services in Lagos and Abuja since 2010.
+            Luxury homes and investment properties across Ikoyi, Victoria
+            Island, and Maitama since 2010.
           </p>
           <div class="footer_social" aria-label="Social media links">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Twitter / X">X</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="WhatsApp">WA</a>
+            <a href="javascript:void(0)" aria-label="Instagram">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" aria-label="Twitter / X">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" aria-label="LinkedIn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="javascript:void(0)" aria-label="WhatsApp">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 
         <div>
           <p class="footer_col-title">Properties</p>
           <ul class="footer_links">
-            <li><a href="#">For Sale</a></li>
-            <li><a href="#">For Rent</a></li>
-            <li><a href="#">New Developments</a></li>
-            <li><a href="#">Luxury Estates</a></li>
-            <li><a href="#">Commercial</a></li>
+            <li><a href="javascript:void(0)">For Sale</a></li>
+            <li><a href="javascript:void(0)">For Rent</a></li>
+            <li><a href="javascript:void(0)">New Developments</a></li>
+            <li><a href="javascript:void(0)">Luxury Estates</a></li>
+            <li><a href="javascript:void(0)">Commercial</a></li>
           </ul>
         </div>
 
         <div>
           <p class="footer_col-title">Company</p>
           <ul class="footer_links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Agents</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
+            <li><a href="javascript:void(0)">About Us</a></li>
+            <li><a href="javascript:void(0)">Our Agents</a></li>
+            <li><a href="javascript:void(0)">Careers</a></li>
+            <li><a href="javascript:void(0)">Press</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -433,11 +702,11 @@
         <div>
           <p class="footer_col-title">Resources</p>
           <ul class="footer_links">
-            <li><a href="#">Market Reports</a></li>
-            <li><a href="#">Property Guide</a></li>
-            <li><a href="#">Mortgage Calculator</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="javascript:void(0)">Market Reports</a></li>
+            <li><a href="javascript:void(0)">Property Guide</a></li>
+            <li><a href="javascript:void(0)">Mortgage Calculator</a></li>
+            <li><a href="javascript:void(0)">Blog</a></li>
+            <li><a href="javascript:void(0)">FAQ</a></li>
           </ul>
         </div>
       </div>
@@ -448,17 +717,17 @@
             &copy; 2026 Prestige Realty Ltd. All rights reserved.
           </p>
           <nav class="footer_legal" aria-label="Legal links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Cookie Policy</a>
+            <a href="javascript:void(0)">Privacy Policy</a>
+            <a href="javascript:void(0)">Terms of Use</a>
+            <a href="javascript:void(0)">Cookie Policy</a>
           </nav>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/nav.js" defer></script>
     <script src="js/form.js" defer></script>
     <script src="js/reveal.js" defer></script>
+    <script src="js/modal.js" defer></script>
   </body>
 </html>
