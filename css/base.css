@@ -1,47 +1,30 @@
-/* base.css
-   Design tokens, reset, typography, keyframes */
+/* base.css — design tokens, reset, typography, keyframes */
 
 :root {
-  /* Colours */
-  --cream:        #f5f0e8;
-  --warm-white:   #faf8f4;
-  --charcoal:     #1c1c1a;
-  --muted:        #6b6860;
-  --gold:         #c9a84c;
-  --gold-light:   #e8d08a;
-  --gold-dim:     rgba(201, 168, 76, 0.2);
-  --rust:         #9b4f2a;
-  --green:        #2d4a3e;
-  --border:       rgba(28, 28, 26, 0.12);
+  --cream: #f5f0e8;
+  --warm-white: #faf8f4;
+  --charcoal: #1c1c1a;
+  --muted: #6b6860;
+  --gold: #c9a84c;
+  --gold-light: #e8d08a;
+  --gold-dim: rgba(201, 168, 76, 0.2);
+  --rust: #9b4f2a;
+  --green: #2d4a3e;
+  --border: rgba(28, 28, 26, 0.12);
   --border-light: rgba(28, 28, 26, 0.07);
 
-  /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body:    "DM Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
 
-  /* Spacing */
-  --space-xs: 0.4rem;
-  --space-sm: 0.8rem;
-  --space-md: 1.6rem;
-  --space-lg: 3.2rem;
   --space-xl: 6rem;
-
-  /* Misc */
-  --nav-h:       72px;
-  --max-w:       1200px;
-  --ease:        cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-card: 0 16px 48px rgba(0, 0, 0, 0.08);
-  --shadow-lift: 0 28px 64px rgba(0, 0, 0, 0.14);
+  --nav-h: 72px;
+  --max-w: 1200px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --fast: 0.2s;
+  --normal: 0.35s;
+  --slow: 0.6s;
 }
 
-@media (max-width: 768px) {
-  :root {
-    --space-xl: 4rem;
-    --space-lg: 2.4rem;
-  }
-}
-
-/* Reset */
 *,
 *::before,
 *::after {
@@ -49,10 +32,13 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -71,14 +57,6 @@ textarea {
   font-family: inherit;
 }
 
-/* Focus styles */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-/* Base typography */
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -86,34 +64,68 @@ body {
   background: var(--warm-white);
   color: var(--charcoal);
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display);
   font-weight: 300;
   line-height: 1.1;
 }
 
+/* Focus styles */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* Keyframes */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes fadeRight {
-  from { opacity: 0; transform: translateX(-20px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes slowZoom {
-  from { transform: scale(1); }
-  to   { transform: scale(1.06); }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.7; transform: scale(1.15); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
 }
 
 /* Reduced motion */
@@ -125,17 +137,18 @@ h1, h2, h3, h4 {
   .btn-primary,
   .hero_cta,
   .hero_badge,
-  .hero_tag {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  .hero_bg { animation: none !important; }
+  .hero_tag,
+  .hero_bg,
   .reveal {
     animation: none !important;
-    transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
-  * { transition-duration: 0.01ms !important; }
+
+  *:not(.nav_panel):not(.nav_backdrop):not(.listing-card):not(
+      .listing-card_img
+    ):not(.agent_photo-wrap img) {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
