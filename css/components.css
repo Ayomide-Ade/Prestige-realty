@@ -216,7 +216,7 @@
 
 /* HERO */
 
-/* Centralised fade-up base — used by multiple hero elements */
+/* Centralised fade-up base is used by multiple hero elements */
 .fade-up {
   opacity: 0;
   transform: translateY(18px);

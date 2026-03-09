@@ -1,8 +1,8 @@
-# Prestige Realty — Real Estate Lead Capture Landing Page
+# Prestige Realty - Real Estate Lead Capture Landing Page
 
 A responsive, multi-file real estate landing page built with vanilla HTML, CSS, and JavaScript. Designed as a portfolio project and deployable on GitHub Pages with zero build tools or dependencies.
 
-> Built by **Ayomide Adesina** — Frontend & Backend Developer
+> Built by **Ayomide Adesina** -> Frontend & Backend Developer
 
 ---
 
@@ -14,9 +14,9 @@ A responsive, multi-file real estate landing page built with vanilla HTML, CSS, 
 
 ## About Me
 
-Hi, I'm Ayomide — a junior full-stack developer with a passion for building clean, functional web experiences. I work across the full stack, from crafting pixel-precise interfaces in HTML, CSS, and JavaScript to building server-side logic with Node.js and Python, backed by MySQL databases.
+Hi, I'm Ayomide, a junior full-stack developer with a passion for building clean, functional web experiences. I work across the full stack, from crafting pixel-precise interfaces in HTML, CSS, and JavaScript to building server-side logic with Node.js and Python, backed by MySQL databases.
 
-This project is a demonstration of my frontend skills — specifically my ability to build structured, well-designed, and responsive user interfaces without relying on frameworks or libraries.
+This project is a demonstration of my frontend skills specifically my ability to build structured, well-designed, and responsive user interfaces without relying on frameworks or libraries.
 
 **What I work with:**
 
@@ -30,9 +30,9 @@ This project is a demonstration of my frontend skills — specifically my abilit
 
 ## About This Project
 
-**Prestige Realty** is a real estate lead capture landing page built entirely from scratch to demonstrate what I can produce with core frontend skills — no frameworks, no build tools, just clean and organised code.
+**Prestige Realty** is a real estate lead capture landing page built entirely from scratch to demonstrate what I can produce with core frontend skills with no frameworks, no build tools, just clean and organised code.
 
-The goal was to show that I understand not just how to write HTML, CSS, and JavaScript, but how to structure a project properly — separating concerns across multiple files the way a real production codebase would be organised.
+The goal was to show that I understand not just how to write HTML, CSS, and JavaScript, but how to structure a project properly, separating concerns across multiple files the way a real production codebase would be organised.
 
 ### What This Project Demonstrates
 
@@ -59,8 +59,8 @@ prestige-realty/
 ├── css/
 │   ├── base.css            # Design tokens, reset, typography, keyframes
 │   ├── layout.css          # Section scaffolding and grid structure (no breakpoints)
-│   ├── components.css      # All UI components — nav, hero, cards, form, modal, footer
-│   ├── utilities.css       # Utility classes — .eyebrow, .reveal, .sr-only, .fade-up
+│   ├── components.css      # All UI components - nav, hero, cards, form, modal, footer
+│   ├── utilities.css       # Utility classes - .eyebrow, .reveal, .sr-only, .fade-up
 │   └── responsive.css      # All breakpoints, loaded last (overrides cascade)
 │
 ├── js/
@@ -85,7 +85,7 @@ The stylesheet is split into five files loaded in a deliberate cascade order:
 | File | Purpose |
 |---|---|
 | `base.css` | Design tokens (colours, fonts, spacing, easing), CSS reset, global typography, keyframe animations |
-| `layout.css` | Section scaffolding — grid structure, spacing, and positioning with no media queries |
+| `layout.css` | Section scaffolding - grid structure, spacing, and positioning with no media queries |
 | `components.css` | Every UI component: nav, hero, cards, form, modal, agent section, footer |
 | `utilities.css` | Small reusable classes: `.eyebrow`, `.reveal`, `.fade-up`, `.sr-only` |
 | `responsive.css` | All `@media` breakpoints in one place, loaded last to guarantee cascade wins |
@@ -104,9 +104,9 @@ Breakpoints: `900px` (tablet), `800px` (wide tablet), `560px` (mobile), `400px` 
 - Animated button hover sweep (CSS `scaleX`, no JS)
 - Property card save/wishlist toggle
 - Property detail modal with keyboard close support
-- Accessible focus management — `:focus-visible` on every interactive element
+- Accessible focus management - `:focus-visible` on every interactive element
 - GPU-composited hover transitions (`backface-visibility`, `will-change` on hover only)
-- `prefers-reduced-motion` support — animations disabled for users who prefer it
+- `prefers-reduced-motion` support - animations disabled for users who prefer it
 
 ---
 
@@ -131,7 +131,7 @@ Hosted on GitHub Pages. To deploy your own copy:
 1. Push to a GitHub repository
 2. Go to **Settings → Pages**
 3. Set branch to `main`, folder to `/` (root)
-4. Save — live in under a minute
+4. Save - live in under a minute
 
 ---
 
