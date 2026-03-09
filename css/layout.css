@@ -114,6 +114,7 @@
   user-select: none;
   line-height: 1;
 }
+
 .form-section .container {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -183,6 +184,27 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
+}
+
+/* Section */
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-50%);
 }
 
 /* Agent */

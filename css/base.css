@@ -25,6 +25,21 @@
   --slow: 0.6s;
 }
 
+body {
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 215, 130, 0.06),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 90%,
+      rgba(255, 215, 130, 0.05),
+      transparent 45%
+    ),
+    #0e0e0e;
+}
+
 *,
 *::before,
 *::after {
